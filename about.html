@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="stylepage.css">
+</head>
+<body>
+    
+<header>
+    <!-- Hamburger Menu for Mobile -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div> 
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="resource.html">IMPLICIT BIAS RESOURCES</a></li>
+            <li><a href="techhero.html">TECH HEROES</a></li>
+            <li><a href="proj3.html">PROJECT 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Meet the Team -->
+    <h1>Meet the Team</h1>
+    <p>We are a group of students passionate about technology, equity, and social justice. <br>
+    Our goal with this project is to explore the impact of implicit bias and highlight diverse voices in tech.</p>
+</header>
+
+<main>
+    <section>
+        <!-- Team Members Section -->
+        <div class="team-container">
+
+            <!-- Darwish Rahim -->
+            <div class="team-member">
+                <img src="images/darwish.jpg" alt="Darwish Rahim" class="team-image">
+                <h3>Darwish Rahim</h3>
+                <button class="expand-btn">More About Darwish</button>
+                <div class="member-info">
+                    <p>Darwish is an Economics and Information Science student who is interested in the intersection of technology and society. 
+                        He enjoys working on projects that challenge existing biases in digital spaces.</p>
+                    <p><strong>Fun Fact:</strong> Loves coding while listening to pop!</p>
+                </div>
+            </div>
+
+            <!-- Allyssa Thao -->
+            <div class="team-member">
+                <img src="images/allyssa.png" alt="Allyssa Thao" class="team-image">
+                <h3>Allyssa Thao</h3>
+                <button class="expand-btn">More About Allyssa</button>
+                <div class="member-info">
+                    <p>Allyssa is a junior majoring in Information Science and pursuing certificates in Digital Studies and Graphic Design.
+                        She is interested in learning how design and technology work together to create better and more welcoming spaces online. 
+                    </p>
+                    <p><strong>Fun Fact:</strong> Loves using Pinterest for project inspiration!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Our Project Team</p>
+</footer>
+
+<!-- JavaScript for Interactive Features -->
+<script>
+    function toggleMenu() {
+        let nav = document.querySelector(".nav-list");
+        nav.style.display = (nav.style.display === "flex") ? "none" : "flex";
+    }
+
+    // Expandable team member info
+    document.querySelectorAll(".expand-btn").forEach(button => {
+        button.addEventListener("click", function() {
+            let info = this.nextElementSibling;
+            info.style.display = (info.style.display === "block") ? "none" : "block";
+        });
+    });
+</script>
+
+</body>
+</html>
